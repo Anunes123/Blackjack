@@ -38,9 +38,9 @@ p.print();
 
 
 d = new Dealer();
-p.cards[0]=deck[2];
-p.cards[1]= deck[3];
-p.print();
+d.cards[0]=deck[2];
+d.cards[1]= deck[3];
+d.print();
 
     }
 
