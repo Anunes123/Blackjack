@@ -30,17 +30,14 @@ counter++;
         }
         System.out.println("***********");
 printDeck();
+shuffle();
+printDeck();
 System.out.println("player's info");
-p = new Player();
-p.cards[0]=deck[0];
-p.cards[1]= deck[1];
-p.print();
-
-
-d = new Dealer();
-d.cards[0]=deck[2];
-d.cards[1]= deck[3];
-d.print();
+        p = new Player();
+        d = new Dealer();
+        deal();
+        p.print();
+        d.print();
 
     }
 
@@ -51,4 +48,33 @@ d.print();
         }
     }
 
+    public void deal (){
+
+
+        p.cards[0]=deck[0];
+        p.cards[1]= deck[1];
+
+
+
+
+        d.cards[0]=deck[2];
+        d.cards[1]= deck[3];
+
+
     }
+    public void shuffle(){
+        System.out.println("shuffling");
+for(int a = 0; a<deck.length; a++){
+    //add a math.ran
+    int random = a + (int) (Math.random()*52-a);
+
+
+    deck[a]= deck [random];
+
+}
+
+
+    }
+
+    }
+//homework: finish the methond with no dups
