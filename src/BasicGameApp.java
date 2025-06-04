@@ -19,7 +19,7 @@ public class BasicGameApp {
         for (int all=0; all<4; all++) {
             for (int x = 0; x < 13; x++) {
                 Card C = new Card(x + 1, all);
-                C.print();
+//                C.print();
                 deck[counter] = C;
 counter++;
 
@@ -29,7 +29,7 @@ counter++;
             }
         }
         System.out.println("***********");
-printDeck();
+//printDeck();
 shuffle();
 printDeck();
 System.out.println("player's info");
@@ -65,11 +65,12 @@ System.out.println("player's info");
     public void shuffle(){
         System.out.println("shuffling");
 for(int a = 0; a<deck.length; a++){
-    //add a math.ran
-    int random = a + (int) (Math.random()*52-a);
+    int random = (int) (Math.random()*52);
+Card sean = deck[a];
+deck[a]=deck[random];
+deck[random] = sean;
 
 
-    deck[a]= deck [random];
 
 }
 
